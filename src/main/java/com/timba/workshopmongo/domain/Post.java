@@ -3,6 +3,7 @@ package com.timba.workshopmongo.domain;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.timba.workshopmongo.dto.AuthorDTO;
@@ -18,11 +19,10 @@ import lombok.NoArgsConstructor;
 public class Post implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
-	@org.springframework.data.annotation.Id
-	private String Id;
+	@Id
+	private String id;
 	private Date date;
 	private String title;
 	private String body;
 	private AuthorDTO author;
-	
 }
